@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Motivators</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <title><%= title %></title>
   <%= csrf_meta_tags %>
+  <%=  render 'layouts/stylesheets' %>
 </head>
 <body>
 
-<%= yield %>
+<%=  render 'layouts/header' %>
+<div class="container">
+  <%= yield %>
+  <%= render 'layouts/footer' %>
+</div>
 
 </body>
 </html>
