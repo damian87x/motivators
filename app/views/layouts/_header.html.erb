@@ -1,2 +1,21 @@
-<%= link_to "Home", root_path %>
-<%= link_to "About", about_path %>
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+
+      <%= link_to "Motivators", root_path, class: "brand" %>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li>
+            <%= link_to 'Home',  root_path %>
+          </li>
+          <li>
+            <%= link_to 'About',  about_path %>
+          </li>
+        </ul>
+        <ul class="nav pull-right">
+              <li><%= link_to 'Login', "#" %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
