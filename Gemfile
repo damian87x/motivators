@@ -2,11 +2,15 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
 gem 'jquery-rails'
+# this is the most popular gem for users authentication
+gem 'devise'
+gem 'simple_form', '2.1.0'
 
 # group for development environment
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails', '~> 2.9.0'
+
   # Web server library for test & development
   gem 'webrick'
   # Show schema from database and put in models

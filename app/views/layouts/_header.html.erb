@@ -13,7 +13,12 @@
           </li>
         </ul>
         <ul class="nav pull-right">
-              <li><%= link_to 'Login', "#" %></li>
+          <% if user_signed_in? %>  <!--boolean test if a user is signed -->
+              <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>  <!--then show edit profile link-->
+              <li><%= link_to 'Logout',  destroy_user_session_path, method: :delete %></li>   <!--then show logout link-->
+          <% else %> <!-- if not -->
+              <li><%= link_to 'Login',  new_user_session_path %></li>     <!--then return login link-->
+          <% end %>
         </ul>
       </div>
     </div>
