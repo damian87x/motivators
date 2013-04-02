@@ -1,5 +1,5 @@
 class MotivatorsController < ApplicationController
-
+before_filter :authenticate_user!, except: [:index]
 
   def index
     @title ="homepage"
@@ -7,12 +7,12 @@ class MotivatorsController < ApplicationController
   end
 
   def new
-    @title ="new Motivator"
-    @motivator = Motivator.new
+    @title ="New motivator"
+    @motivator = current_user.motivators.new
   end
 
   def create
-    @motivator = Motivator.new(params[:motivator])
+    @motivator = current_user.motivators.new(params[:motivator])
     if @motivator.save
       redirect_to(@motivator, notice: 'Motivator was successfully created.')
     else
@@ -21,8 +21,8 @@ class MotivatorsController < ApplicationController
   end
 
   def edit
-    @title ="edit Motivator"
-    @motivator = Motivator.find(params[:id])
+    @title ="Edit motivator"
+    @motivator = current_user.motivators.find(params[:id])
   end
 
 
@@ -36,12 +36,12 @@ class MotivatorsController < ApplicationController
   end
 
   def show
-    @title ="show Motivator"
+    @title ="Show motivator"
     @motivator = Motivator.find(params[:id])
   end
 
   def destroy
-    @motivator = Motivator.find(params[:id])
+    @motivator =  current_user.motivators.find(params[:id])
     @motivator.destroy
     redirect_to(root_path, notice: 'Motivator was successfully deleted.' )
   end
