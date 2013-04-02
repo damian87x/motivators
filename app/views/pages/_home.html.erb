@@ -1,0 +1,12 @@
+<% unless user_signed_in? %>  <!-- unless statement, show Welcome box if user not signed in-->
+    <div class="center hero-unit">
+      <h1>Welcome to Motivators!</h1>
+      <p>
+        Get motivation from motivators, create your own.
+      </p>
+      <p>
+        <%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
+      </p>
+    </div>
+<% end %>
+

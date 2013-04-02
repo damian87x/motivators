@@ -1,0 +1,16 @@
+<%=  render 'pages/home' %>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <%=  render @motivators %>
+  </tbody>
+</table>
+<%= link_to 'Add motivator', new_motivator_path %>

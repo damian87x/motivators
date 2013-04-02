@@ -1,6 +1,6 @@
 Motivators::Application.routes.draw do
-  devise_for :users
-
-  root :to => 'pages#home'
+  root :to => 'motivators#index'
   match '/about' => 'pages#about'
+  devise_for :users
+  resources :motivators
 end
