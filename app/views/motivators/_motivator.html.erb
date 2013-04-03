@@ -1,4 +1,5 @@
 <tr>
+  <td><%= image_tag motivator.image(:medium) %></td>
   <td><%= motivator.description %></td>
   <td><%= link_to 'Show', motivator_path(motivator) %></td>
   <% if current_user == motivator.user %>

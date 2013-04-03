@@ -5,7 +5,7 @@ gem 'jquery-rails'
 # this is the most popular gem for users authentication
 gem 'devise'
 gem 'simple_form', '2.1.0'
-
+gem "paperclip", "~> 3.0"
 # group for development environment
 group :development, :test do
   gem 'sqlite3'
