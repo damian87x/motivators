@@ -1,12 +1,19 @@
-<tr>
-  <td><%= image_tag motivator.image(:medium) %></td>
-  <td><%= motivator.description %></td>
-  <td><%= link_to 'Show', motivator_path(motivator) %></td>
+<div class="box">
+  <%= link_to (image_tag motivator.image(:medium)), motivator %>
+  <p class="description">
+    <%= motivator.description %>
+  </p>
+  <p>
+    <strong>
+      Posted by <%= motivator.user.name %>
+    </strong>
+  </p>
   <% if current_user == motivator.user %>
-  <td><%= link_to 'Edit', edit_motivator_path(motivator) %></td>
-  <td><%= link_to 'Destroy', motivator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <p>
+        <%= link_to 'Edit', edit_motivator_path(motivator) %>
+        <%= link_to 'Destroy', motivator, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </p>
   <% end %>
-</tr>
-
+</div>
 
 
