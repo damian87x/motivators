@@ -2,12 +2,16 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
 gem 'jquery-rails'
-# this is the most popular gem for users authentication
+# this is popular gem for users authentication
 gem 'devise'
 gem 'simple_form', '2.1.0'
+# gem for Images
 gem "paperclip", "~> 3.0"
 # to make fake data
 gem "faker"
+gem 'will_paginate', '~> 3.0'
+gem "bootstrap-will_paginate"
+
 # group for development environment
 group :development, :test do
   gem 'sqlite3'
