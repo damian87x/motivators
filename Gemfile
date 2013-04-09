@@ -6,6 +6,8 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'simple_form', '2.1.0'
 gem "paperclip", "~> 3.0"
+# to make fake data
+gem "faker"
 # group for development environment
 group :development, :test do
   gem 'sqlite3'
