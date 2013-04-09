@@ -11,7 +11,7 @@ gem "paperclip", "~> 3.0"
 gem "faker"
 gem 'will_paginate', '~> 3.0'
 gem "bootstrap-will_paginate"
-
+gem "friendly_id", "~> 4.0.9"
 # group for development environment
 group :development, :test do
   gem 'sqlite3'
