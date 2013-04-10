@@ -16,6 +16,8 @@
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #  name                   :string(255)
+#  slug                   :string(255)
+#  admin                  :boolean
 #
 
 class User < ActiveRecord::Base
@@ -30,6 +32,5 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me
-  # attr_accessible :title, :body
   validates :name, presence: true
 end

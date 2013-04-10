@@ -13,6 +13,9 @@
           </li>
         </ul>
         <ul class="nav pull-right">
+          <% if user_signed_in?&&current_user.admin? %>
+          <li><%=  link_to "Moderate",'#' %></li>
+          <% end %>
           <% if user_signed_in? %>  <!--boolean test if a user is signed -->
               <li><%= link_to "Add +", new_motivator_path %><li>
               <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>  <!--then show edit profile link-->
@@ -20,6 +23,7 @@
           <% else %> <!-- if not -->
               <li><%= link_to 'Login',  new_user_session_path %></li>     <!--then return login link-->
           <% end %>
+
         </ul>
       </div>
     </div>
