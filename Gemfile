@@ -7,8 +7,8 @@ gem 'devise'
 gem 'simple_form', '2.1.0'
 # gem for Images
 gem "paperclip", "~> 3.0"
-# to make fake data
-gem 'faker'
+
+
 gem 'will_paginate', '~> 3.0'
 gem 'bootstrap-will_paginate'
 gem 'friendly_id', '~> 4.0.9'
@@ -19,7 +19,8 @@ gem "meta_search",    '>= 1.1.0.pre'
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails', '~> 2.9.0'
-
+  # to make fake data
+  gem 'faker'
   # Web server library for test & development
   gem 'webrick'
   # Show schema from database and put in models

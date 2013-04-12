@@ -27,3 +27,14 @@
 // .active_admin       applies to any Active Admin namespace
 // .admin_namespace    applies to the admin namespace (eg: /admin)
 // .other_namespace    applies to a custom namespace named other (eg: /other)
+.center_text {
+  text-align: center;
+}
+
+#inner {
+  width: 50%;
+  margin: 0 auto;
+}
+
+
+

@@ -29,8 +29,13 @@ class User < ActiveRecord::Base
   has_many :motivators
   extend FriendlyId
   friendly_id :name, use: :slugged
-
   # Setup accessible (or protected) attributes for your model
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me
   validates :name, presence: true
+
+
+
+  def to_s
+    name
+  end
 end

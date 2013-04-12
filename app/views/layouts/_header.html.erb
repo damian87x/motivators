@@ -14,7 +14,9 @@
         </ul>
         <ul class="nav pull-right">
           <% if user_signed_in?&&current_user.admin? %>
-          <li><%=  link_to "Moderate", admin_root_path %></li>
+          <li><%=  link_to "Admin Panel:", admin_root_path %></li>
+          <li><%=  link_to "Users", admin_users_path %></li>
+          <li><%=  link_to "Motivators", admin_motivators_path %></li>
           <% end %>
           <% if user_signed_in? %>  <!--boolean test if a user is signed -->
               <li><%= link_to "Add +", new_motivator_path %><li>

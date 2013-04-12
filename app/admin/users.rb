@@ -26,16 +26,20 @@ ActiveAdmin.register User do
     column "UserName", :name
     column :email
     column "Created", :created_at
-    actions do |user|
-      link_to "Preview", user_path(user), :class => "member_link"
-    end
+    actions
   end
 
 
   show :title => :name do
     panel "User motivators" do
       table_for(user.motivators) do
-      column :description
+        column "Image" do |motivator|
+          link_to(image_tag(motivator.image.url(:medium), :height => '240'), admin_motivator_path(motivator))
+        end
+        column :description
+        column :created_at
+        column :image_file_size
+
       end
     active_admin_comments
   end

@@ -15,7 +15,7 @@
 #
 
 class Motivator < ActiveRecord::Base
-  attr_accessible :description, :image, :image_remote_url
+  attr_accessible :description, :image, :image_remote_url, :user_id
   belongs_to :user
   validates_attachment :image, presence: true,
                        content_type: { content_type: ['image/jpeg', 'image/jpg', 'image/png', 'image/gif'] },
@@ -31,5 +31,11 @@ class Motivator < ActiveRecord::Base
     # super method
     super
   end
+
+  def to_s
+    description
+  end
+
+
 
 end
