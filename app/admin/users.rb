@@ -23,10 +23,14 @@ ActiveAdmin.register User do
 
   index do
     selectable_column
-    column "UserName", :name
+    column "User Name" do |user|
+      link_to user.name, admin_user_path(user)
+    end
     column :email
     column "Created", :created_at
-    actions
+    actions do |user|
+      link_to "Preview", user_path(user)
+    end
   end
 
 
@@ -39,8 +43,7 @@ ActiveAdmin.register User do
         column :description
         column :created_at
         column :image_file_size
-
-      end
+     end
     active_admin_comments
   end
 end

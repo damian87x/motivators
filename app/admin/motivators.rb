@@ -5,27 +5,6 @@ ActiveAdmin.register Motivator do
   filter :image_file_size
   filter :user_id
 
-=begin
-  # gird version of index motivators
-  index :as => :grid, :columns => 2 do |motivator|
-    div do
-      a :href => admin_motivator_path(motivator) do
-       image_tag(motivator.image.url(:medium), :height => '240')
-      end
-      div do
-        a truncate(motivator.description), :href => admin_motivator_path(motivator)
-      end
-    div  do
-    link_to "delete",resource_path(motivator.id),:method=>:delete,:confirm=>"are you sure?"
-    end
-   end
-  end
- column "Image" do |event|
-    link_to(image_tag(event.image.url(:thumb), :height => '100'), admin_event_path(event))
-  end
-
-=end
-
   index do
     selectable_column
     column "Image" do |motivator|
@@ -34,7 +13,9 @@ ActiveAdmin.register Motivator do
     column :description
     column :created_at
     column :image_file_size
-    actions
+    actions do |motivator|
+      link_to "Preview", motivator_path(motivator)
+    end
   end
 
 
