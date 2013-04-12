@@ -7,7 +7,7 @@ gem 'devise'
 gem 'simple_form', '2.1.0'
 # gem for Images
 gem "paperclip", "~> 3.0"
-
+gem 'aws-sdk'
 
 gem 'will_paginate', '~> 3.0'
 gem 'bootstrap-will_paginate'
@@ -40,4 +40,5 @@ end
 group :production do
   # pg library helps access to PostgreSQL database which use heroku
   gem 'pg', '~> 0.12.2'
+
 end
