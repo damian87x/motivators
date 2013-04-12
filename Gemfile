@@ -8,10 +8,13 @@ gem 'simple_form', '2.1.0'
 # gem for Images
 gem "paperclip", "~> 3.0"
 # to make fake data
-gem "faker"
+gem 'faker'
 gem 'will_paginate', '~> 3.0'
-gem "bootstrap-will_paginate"
-gem "friendly_id", "~> 4.0.9"
+gem 'bootstrap-will_paginate'
+gem 'friendly_id', '~> 4.0.9'
+gem 'activeadmin'
+gem "meta_search",    '>= 1.1.0.pre'
+
 # group for development environment
 group :development, :test do
   gem 'sqlite3'
