@@ -3,7 +3,7 @@ before_filter :authenticate_user!, except: [:index]
 
   def index
     @title ="homepage"
-    @motivators = Motivator.order("created_at desc").page(params[:page]).per_page(15)
+    @motivators = Motivator.where(approved: true).order("created_at desc").page(params[:page]).per_page(15)
   end
 
   def new
@@ -45,4 +45,7 @@ before_filter :authenticate_user!, except: [:index]
     @motivator.destroy
     redirect_to(root_path, notice: 'Motivator was successfully deleted.' )
   end
+
+
+
 end

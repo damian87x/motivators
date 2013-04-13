@@ -12,6 +12,7 @@
 #  image_file_size    :integer
 #  image_updated_at   :datetime
 #  image_remote_url   :string(255)
+#  approved           :boolean          default(FALSE)
 #
 
 require 'spec_helper'

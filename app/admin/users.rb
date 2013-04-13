@@ -37,6 +37,7 @@ ActiveAdmin.register User do
   show :title => :name do
     panel "User motivators" do
       table_for(user.motivators) do
+        column(:approved) { |motivator| status_tag (motivator.approved ? "True" : "False"), (motivator.approved ? :ok : :error) }
         column "Image" do |motivator|
           link_to(image_tag(motivator.image.url(:medium), :height => '240'), admin_motivator_path(motivator))
         end

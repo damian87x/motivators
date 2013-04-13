@@ -12,10 +12,11 @@
 #  image_file_size    :integer
 #  image_updated_at   :datetime
 #  image_remote_url   :string(255)
+#  approved           :boolean          default(FALSE)
 #
 
 class Motivator < ActiveRecord::Base
-  attr_accessible :description, :image, :image_remote_url, :user_id
+  attr_accessible :description, :image, :image_remote_url, :user_id, :approved
   belongs_to :user
   validates_attachment :image, presence: true,
                        content_type: { content_type: ['image/jpeg', 'image/jpg', 'image/png', 'image/gif'] },

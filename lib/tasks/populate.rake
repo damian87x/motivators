@@ -17,7 +17,8 @@ namespace :db do
       10.times do |n|
         image = File.open(Dir.glob(File.join(Rails.root, 'sampleimages', '*')).sample)
         description = %w(cool awesome crazy wow adorable incredible).sample
-        user.motivators.create!(image: image, description: description)
+        approved = [true, false].sample
+        user.motivators.create!(image: image, description: description, approved: approved)
       end
     end
 
