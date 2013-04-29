@@ -1,4 +1,5 @@
 module ApplicationHelper
+
   # Returns the full title or basic for all pages
   def title   # Method definition
     base_title = "Motivators - Get inspiration and change your life now!" # Variable assignment
@@ -14,4 +15,6 @@ module ApplicationHelper
     # link whit text "Motivators" and path "/"
     link_to("Motivators", root_path)
   end
+
+
 end

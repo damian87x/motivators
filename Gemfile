@@ -25,6 +25,7 @@ group :development, :test do
   gem 'webrick'
   # Show schema from database and put in models
   gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
+
 end
 
 
@@ -35,6 +36,10 @@ group :assets do
   gem 'bootstrap-sass', '~> 2.3.1.0'
 end
 
+group :test do
+  gem 'capybara'
+  gem 'factory_girl_rails'
+end
 
 # group for production environment
 group :production do

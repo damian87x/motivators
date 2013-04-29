@@ -1,11 +1,11 @@
 class PagesController < ApplicationController
   def home
     # variable for title definition in helper.
-    @title = "home"
+    @title = "Home"
 
   end
 
   def about
-    @title = "about"
+    @title = "About"
   end
 end
