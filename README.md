@@ -29,8 +29,7 @@ Live demo:
 
 ## What's next?
 
-1.Add rspec tests to application.
-2.Customize Active Admin.
-3.Add facebook, twitter, google registration.
-4.More
-
+++ Add rspec tests to application
+++ Customize Active Admin.
+++ Add facebook, twitter, google registration.
+++ More
