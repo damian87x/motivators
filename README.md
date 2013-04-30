@@ -29,7 +29,8 @@ Live demo:
 
 ## What's next?
 
-++ Add rspec tests to application
-++ Customize Active Admin.
-++ Add facebook, twitter, google registration.
-++ More
+-Add rspec tests to application.<br>
+-Add mailer reset password.<br>
+-Customize Active Admin.<br>
+-Add facebook, twitter, google registration.<br>
+-More...
