@@ -57,6 +57,7 @@ describe User do
   it { should respond_to(:reset_password_token) }
   it { should respond_to(:reset_password_sent_at) }
   it { should respond_to(:encrypted_password) }
+  it { should respond_to(:motivators) }
   it { should_not be_admin }
 
 
@@ -172,5 +173,31 @@ describe User do
 
    end
   end
+
+
+  describe "motivator associations" do
+
+    before { @user.save }
+    let!(:older_motivator) do
+      FactoryGirl.create(:motivator, user: @user, created_at: 1.day.ago)
+    end
+    let!(:newer_motivator) do
+      FactoryGirl.create(:motivator, user: @user, created_at: 1.hour.ago)
+    end
+
+   it "should have the right motivator in the right order" do
+      @user.motivators.should == [newer_motivator, older_motivator]
+   end
+
+    it "should destroy associated motivators" do
+      motivators = @user.motivators
+      @user.destroy
+      motivators.each do |m|
+        Motivator.find_by_id(m.id).should be nil
+      end
+    end
+
+
+end
 
 end

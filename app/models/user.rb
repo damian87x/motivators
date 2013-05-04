@@ -26,7 +26,7 @@ class User < ActiveRecord::Base
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  has_many :motivators
+  has_many :motivators, dependent: :destroy
   extend FriendlyId
   friendly_id :name, use: :slugged
   # Setup accessible (or protected) attributes for your model

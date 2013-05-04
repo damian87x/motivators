@@ -37,6 +37,9 @@ class Motivator < ActiveRecord::Base
     description
   end
 
+  default_scope order: 'motivators.created_at DESC'
+
+
 
 
 end
