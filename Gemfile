@@ -5,7 +5,7 @@ gem 'jquery-rails'
 # this is popular gem for users authentication
 gem 'devise'
 gem 'simple_form', '2.1.0'
-# gem for Images
+# gem for upload Images
 gem "paperclip", "~> 3.0"
 gem 'aws-sdk'
 
