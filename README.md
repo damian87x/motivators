@@ -22,6 +22,8 @@ For generate fake data use:
 ```console
 rake db:populate
 ```
+For active admin user:
+Use console to change admin boolean to true
 
 Live demo:
 
