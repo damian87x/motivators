@@ -10,7 +10,7 @@
   </p>
   <% if current_user == motivator.user %>
       <p>
-        <%= link_to 'Edit', edit_motivator_path(motivator) %>
+        <%= link_to 'Edit', edit_motivator_path(motivator) %> |
         <%= link_to 'Destroy', motivator, method: :delete, data: { confirm: 'Are you sure?' } %>
       </p>
   <% end %>

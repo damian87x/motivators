@@ -78,7 +78,7 @@ describe Motivator do
 
   describe "should work image url when set" do
     before {@motivator.image_file_name = " "
-            @motivator.image_remote_url = ("http://www.guestcentric.com/wp-content/uploads/2012/02/url.jpg")}
+            @motivator.image_remote_url = ("http://goo.gl/Tm6HA")}
     it { should be_valid}
   end
 

@@ -14,7 +14,7 @@ before_filter :authenticate_user!, except: [:index]
   def create
     @motivator = current_user.motivators.new(params[:motivator])
     if @motivator.save
-      redirect_to(@motivator, notice: 'Motivator was successfully created.')
+      redirect_to(@motivator, notice: 'Motivator was successfully created and waiting for Approval by Admin')
     else
       render ('new')
     end

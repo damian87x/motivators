@@ -12,9 +12,10 @@ FactoryGirl.define do
   end
 
   factory :motivator do
-    description "Lorem ipsum"
+    sequence(:description) { |n| "Description #{n}"}
     image_file_name File.new(Rails.root + 'spec/fixtures/images/rails.jpg')
     user
+    approved 'false'
   end
 
 end

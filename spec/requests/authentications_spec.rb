@@ -46,7 +46,8 @@ describe "Authentications" do
       it { should_not have_link('Motivators', href: admin_motivators_path) }
       it { should_not have_link('Users', href: admin_users_path) }
       it { should_not have_link('Login', href: new_user_session_path) }
-
+      it { should_not have_content('Get motivation from motivators, create your own.')}
+      it { should_not have_link('Sign Up Now!', href: new_user_registration_path)}
       describe "when Logout" do
         before { click_link 'Logout' }
         it { should have_link('Login') }
@@ -93,6 +94,12 @@ describe "Authentications" do
     let(:user) { FactoryGirl.create(:user) }
     let(:motivator) { FactoryGirl.create(:motivator) }
     describe "For non-signed-in users" do
+
+      describe "in root page" do
+        before { visit root_path}
+        it { should have_content('Get motivation from motivators, create your own.')}
+        it { should have_link('Sign Up Now!', href: new_user_registration_path)}
+      end
 
       describe "login in" do
         before do
@@ -283,6 +290,9 @@ describe "Authentications" do
 
     end
   end
+
+
+
 end
 
 
