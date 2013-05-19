@@ -150,6 +150,7 @@ describe "Motivators" do
           end
           it { should have_content("Posted by") }
           it { should have_selector('img') }
+          it { should have_selector('a', text: user.name) }
           it { should have_content(@motivator.description)}
         end
       end
