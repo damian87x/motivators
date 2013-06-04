@@ -18,6 +18,7 @@
 class Motivator < ActiveRecord::Base
   attr_accessible :description, :image, :image_remote_url, :user_id, :approved
   belongs_to :user
+  delegate :name, :to => :user, :prefix => true
   validates_attachment :image, presence: true,
                        content_type: { content_type: ['image/jpeg', 'image/jpg', 'image/png', 'image/gif'] },
                        size: { less_than: 5.megabytes }

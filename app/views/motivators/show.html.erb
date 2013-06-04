@@ -6,7 +6,7 @@
         <%= @motivator.description %>
       </p>
       <p>
-        <%= @motivator.user.name %>
+        <%= @motivator.user_name %>
       </p>
       <% if current_user == @motivator.user %>
           <%= link_to 'Edit', edit_motivator_path(@motivator) %> |

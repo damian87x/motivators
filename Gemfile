@@ -26,6 +26,7 @@ group :development, :test do
   # Show schema from database and put in models
   gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
   gem 'spork-rails'
+  gem "rails_best_practices"
 end
 
 

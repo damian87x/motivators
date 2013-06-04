@@ -17,3 +17,4 @@ doc/
 # Ignore Paperclip uploaded files
 /public/system
 /coverage
+rails_best_practices_output.html
