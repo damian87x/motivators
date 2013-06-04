@@ -38,6 +38,7 @@ describe User do
   end
 
 
+
   subject {@user}
 
 
@@ -59,7 +60,6 @@ describe User do
   it { should respond_to(:encrypted_password) }
   it { should respond_to(:motivators) }
   it { should_not be_admin }
-
 
 
 

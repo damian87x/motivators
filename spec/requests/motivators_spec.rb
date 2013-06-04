@@ -131,6 +131,15 @@ describe "Motivators" do
         it { should have_content('Please review the problems below:') }
       end
 
+      describe "with valid information" do
+        before do
+          fill_in "Description", with: "abctest"
+          click_button "Update Motivator"
+        end
+
+        it { should have_content('Motivator was successfully updated.') }
+      end
+
     end
 
   end
