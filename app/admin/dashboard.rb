@@ -11,11 +11,7 @@ ActiveAdmin.register_page "Dashboard" do
              column(:user_id) { |motivator|  User.find(motivator.user_id) }
           end
         end
-
-      end
-
+       end
     end
   end
-
 end
-

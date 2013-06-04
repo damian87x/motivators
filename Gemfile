@@ -37,6 +37,7 @@ group :assets do
 end
 
 group :test do
+  gem 'simplecov', :require => false
   gem 'capybara'
   gem 'factory_girl_rails'
 end

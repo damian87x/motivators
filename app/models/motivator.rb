@@ -32,14 +32,5 @@ class Motivator < ActiveRecord::Base
     # super method
     super
   end
-
-  def to_s
-    description
-  end
-
   default_scope order: 'motivators.created_at DESC'
-
-
-
-
 end

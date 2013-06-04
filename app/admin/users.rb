@@ -4,7 +4,6 @@ ActiveAdmin.register User do
   filter :email
   filter :created_at
   filter :admin
-
   scope :all, :default => true
 
   scope :admins do |user|
@@ -20,7 +19,6 @@ ActiveAdmin.register User do
     f.actions
   end
 
-
   index do
     selectable_column
     column "User Name" do |user|
@@ -32,7 +30,6 @@ ActiveAdmin.register User do
       link_to "Preview", user_path(user)
     end
   end
-
 
   show :title => :name do
     panel "User motivators" do
@@ -54,8 +51,3 @@ end
   end
 
 end
-
-
-
-
-

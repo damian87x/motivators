@@ -1,8 +1,5 @@
 ActiveAdmin.register Motivator do
-
-
   scope :all, :default => true
-
   scope :approved do |motivator|
     motivator.where(:approved => true)
   end
@@ -53,9 +50,5 @@ ActiveAdmin.register Motivator do
   sidebar "Motivator Details", :only => :show do
     attributes_table_for motivator,  :description, :created_at, :updated_at, :image_file_name, :image_file_size,
                                      :image_content_type, :image_remote_url, :approved
-  end
-
+    end
 end
-
-
-
